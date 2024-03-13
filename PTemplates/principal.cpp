@@ -16,15 +16,25 @@ public:
 	T b;
 	U c;
 	U d;
-	A(T a, T b) : a(a), b(b) {}
+	A(T _a, T _b) : a(_a), b(_b) {
+		//a = _a;
+		//b = _b;
+
+	}
 	T sumar() {
 		return a + b;
 	}
 
+	U restar() {
+		return c - d;
+	}
 
 };
 
 int main() {
+	//A<int, float> pa(10, 40);
+	//cout << pa.sumar() << endl;
+
 	Pila<string> pila(5);
 	pila.push("juan");
 	pila.push("pedro");
@@ -35,11 +45,12 @@ int main() {
 
 	pila.imprimir();
 
-	string aux = pila.pop();
+	//pila.pop();
 
-	pila.imprimir();
+	//pila.imprimir();
 
-	//cout << sumar<string>(string("Jose "), string("Luis")) << endl;
-	//cout << sumar<int>(10, 23) << endl;
+	/*cout << sumar<string>(string("Jose "), string("Luis")) << endl;
+	cout << sumar<int>(10, 23) << endl;
+	cout << sumar<float>(12.5f, 16.9f) << endl;*/
 	return 0;
 }

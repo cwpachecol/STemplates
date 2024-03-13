@@ -10,7 +10,7 @@ private:
 	int tope;
 	int tamano;
 public:
-	Pila(int tamano);
+	Pila(int _tamano);
 	~Pila();
 	void push(T dato);
 	T pop();
@@ -73,7 +73,9 @@ inline int Pila<T>::getTope()
 template<typename T>
 inline bool Pila<T>::estaVacia()
 {
-
+	if (tope >= 0) {
+		return true;
+	}
 	return false;
 }
 
